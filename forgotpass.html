@@ -1,15 +1,28 @@
 <html>
-    <header><!--insert style sheet here--></header>
-    <body>
-        <h1>LOGO</h1>
-        <form action="?">
+    <header>
+        <style>
+             img{
+                    display: block;
+                    height: 300px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 50%;
+                }
+        </style>
+    </header>
+    <body style="background-color: aquamarine;">
+        <img id="mainlogo" src="media/initiallogo.png" alt="dashboard logo">
+        <form action="?" style="text-align: center;">
             <label for="email"></label>
             <input type="email" id="email">
             <br>
             <input type="submit">
             <br>
             <a href="./login.html">back to sign in</a>
+            <a href="./Dashboard.html">homepage</a>
         </form>
     </body>
-    <footer> made by team ?</footer>
+    <footer> 
+        <p style="text-align: center;"> made by team ? </p> 
+    </footer>
 </html>

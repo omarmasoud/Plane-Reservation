@@ -6,157 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard for Reservation</title>
-    <style>
-        #mainlogo {
-
-            display: block;
-            height: 300px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
-
-        h1,
-        h2 {
-            text-align: center;
-        }
-
-        .headmenu {
-            background-color: #333;
-            overflow: auto;
-            white-space: nowrap;
-        }
-        .headmenu :hover{
-            background-color: #777;
-            
-        }
-
-        .headmenu>a {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px;
-            text-decoration: none;
-        }
-
-
-        #uppercontainer {
-            display: flex;
-            flex-direction: row;
-            margin-left: auto;
-            margin-right: auto;
-            overflow: auto;
-            white-space: nowrap;
-        }
-
-        .containerelements {
-
-            width: 300;
-            height: 300;
-            margin: 30px;
-
-        }
-
-        .containerelements>h2 {
-            font-size: 30px;
-            text-shadow: 1px 1px dimgray;
-            font-family: 'Times New Roman', Times, serif;
-            color: dimgrey;
-
-        }
-
-        .containerelements:hover {
-            background-color: cadetblue;
-
-        }
-
-        .containerelements>h2:hover {
-
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold';
-            color: black;
-        }
-
-        .containerelements>p,a {
-            
-            font-size: 20px;
-            font-family: 'Times New Roman', Times, serif;
-            color: darkslategrey;
-        }
-
-        #services {
-            background-color: darkcyan;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 
-<body style="background-color: aquamarine;">
-    <div class="headmenu">
-        <a href="#home">Home</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="#support">Support</a>
-        <a href="#blog">Blog</a>
-        <a href="payment.html">Payment Methods</a>
-        <a href="#custom">Custom</a>
-        <a href="#more">More</a>
-        <a href="#logo">Logo</a>
-        <a href="#partners">Partners</a>
-        <a href="#people">People</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign up</a>
-    </div>
-    <div>
-        <img id="mainlogo" src="media/initiallogo.png" alt="dashboard logo">
-        <h1>More than plane reservation services,it's a traveling companion </h1>
-    </div>
-    <div id="services">
-        <h2 style="font-size: 40px;">Discover our services</h2>
-        <div id="uppercontainer">
+<body>
+    <div class="container">
+        <header class="header">
+            <img class="mainlogo" src="./media/logo.svg" alt="logo" >
+            
+            <nav class="headmenu">
+                <a href="./index.html">Home</a>
+                <a href="./pages/payment.html">Payment Methods</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+                <a href="#support">Support</a>
+                <a href="#blog">Blog</a>
+            </nav>
+    
+            <div class="headmenu">
+                <a href="./pages/login.html">Login</a>
+                <a href="./pages/forgotpass.html">Sign up</a>
+            </div>
+        </header>
+    
+        <div class="body">
+            <div id="services">
+                <div id="uppercontainer">
+                    <div class="containerelements">
+                        <h2>Schedule a flight</h2>
+                        <a href="availableplanes.html">one of our main services is that you can schedule flights just pick destinations, suitable timings, voila you can see all available results!
+                        </a>
+                    </div>
+                    <div class="containerelements">
+                        <h2>Track flights</h2>
+                        <p>
+                            waiting for a relative/friend 's arival? just enter flight details and we will keep you up to date
+                        </p>
+                    </div>
+                    <div class="containerelements">
+                        <h2>Budget Friendly Solutions</h2>
+                        <p>
+                            Search results are overpriced? Enter your budget and we'll find you the flight that best matches you
+                        </p>
+                    </div>
+                    <div class="containerelements">
+                        <h2>Review Based Selection</h2>
+                        <p>
+                            worried about trying a new airline or agency? we've got this for you !! go check other people reviews
+                        </p>
+                    </div>
+                    <div class="containerelements">
+                        <h2>Hotel Services</h2>
+                        <p>
+                            We will show you most convinient hotels near your destinations it can also be filtered on reviews!
+                        </p>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
 
-            <div class="containerelements">
-                <h2 cl  ass="containerelements">Schedule a flight</h2>
-                <a href="availableplanes.html">one of our main services is that you can schedule flights
-                    <br>
-                    just pick destinations, suitable timings,
-                    <br>
-                    voila you can see all available results!
-                </a>
-            </div>
-            <div class="containerelements">
-                <h2 class="containerelements">Track flights</h2>
-                <p>
-                    waiting for a relative/friend 's arival?
-                    <br>
-                    just enter flight details and we will keep you up to date
-                </p>
-            </div>
-            <div class="containerelements">
-                <h2 class="containerelements">Budget Friendly Solutions</h2>
-                <p>
-                    Search results are overpriced?
-                    <br>
-                    Enter your budget and we'll find you the flight that best matches you
-                </p>
-            </div>
-            <div class="containerelements">
-                <h2 class="containerelements">Review Based Selection</h2>
-                <p>
-                    worried about trying a new airline or agency?
-                    <br>
-                    we've got this for you !!
-                    <br>
-                    go check other people reviews
-                </p>
-            </div>
-            <div class="containerelements">
-                <h2 class="containerelements">Hotel Services</h2>
-                <p>
-                    We will show you most convinient hotels near your destinations
-                    <br>
-                    it can also be filtered on reviews!
-                </p>
-            </div>
-
+        <div class="footer">
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#support">Support</a>
+            <a href="#blog">Blog</a>
         </div>
     </div>
 

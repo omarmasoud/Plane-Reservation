@@ -1,0 +1,36 @@
+#uppercontainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.containerelements {
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    border: 2px black solid;
+    text-align: justify;
+    padding: 16px;
+    grid-area: containerelements;
+}
+
+.containerelements>h2 {
+    font-size: 30px;
+    text-shadow: 1px 1px dimgray;
+    color: dimgrey;
+
+}
+
+.containerelements:hover {
+    background-color: cadetblue;
+
+}
+
+.containerelements>h2:hover {
+    color: black;
+}
+
+.containerelements>p,a {
+    
+    font-size: 20px;
+    color: darkslategrey;
+}

@@ -1,0 +1,32 @@
+.head
+{
+    color: rgb(220, 220, 220);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.dialoge
+{
+    text-align: center;
+    margin: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+table
+{
+    margin: auto;
+}
+.names td
+{
+    text-align: center;
+    width: 250px;
+}
+.names td:hover
+{
+    color: #E8CB4A;
+}
+.cards td
+{
+    text-align: center;
+    width: 250px;
+    background-color: #7ABCF5;
+}

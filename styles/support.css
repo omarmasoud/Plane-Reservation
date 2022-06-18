@@ -1,0 +1,10 @@
+.sidebar
+{
+    background-color: #4727B9;
+    width: 100px;
+    height: 85%;
+}
+.sidebar a
+{
+    color: rgb(220, 220, 220);
+}

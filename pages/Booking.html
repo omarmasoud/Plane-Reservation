@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>A pool of most convinient flight</title>
+</head>
+<body>
+    <div style="text-align: center; color:azure">
+        <a href="../index.html"> Back to home </a>
+    </div>
+    <div class="container" style="position:relative;  left:25% ; vertical-align: middle; width: min-contenta;">
+        <form action="./Booking.html" method="get">
+            <fieldset style="width:max-content ;border:4px #3799F0 solid; border-radius: 10%;" >
+                <legend style="font-size:x-large; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Select your preferable options</legend>
+                <label for="from">From:</label>
+                <select name="from" id="from">
+                    <option value="opt1">cairo</option>
+                    <option value="opt2">Athens</option>
+                </select>   
+                <label for="To">To:</label>
+                <select name="to" id="from">
+                    <option value="opt1">cairo</option>
+                    <option value="opt2">Athens</option>
+                </select> 
+                <label for="budget">Maximum budget?:</label>
+                <input type="text" placeholder="what is your maximum budget?">
+                <label for="Timing">Timing:</label>
+                <input type="datetime-local"/>
+                <button>View Flights</button>
+            </fieldset>
+        </form>
+        <div id="tableholder">
+            <!---to put and list available flights in here from database or api-->
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>

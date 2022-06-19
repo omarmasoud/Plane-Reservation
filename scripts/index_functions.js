@@ -69,3 +69,27 @@ function toggle_destination_color(focus, choice) {
         search.classList.remove("secondary");
     }
 }
+
+function list_arrow_traversal(e, list_items, choice) {
+    
+    if (current_li[choice] < 0) {
+        list_items[0].classList.add("back-primary-dark");
+        ++current_li[choice];
+    }
+
+    else {
+        switch (e.keyCode) {
+            case 38: // Up arrow
+                list_items[current_li[choice]].classList.remove("back-primary-dark");
+                current_li[choice] = (current_li[choice] > 0) ? --current_li[choice] : 0;
+                list_items[current_li[choice]].classList.add("back-primary-dark");
+                break;
+
+            case 40: // Down arrow
+                list_items[current_li[choice]].classList.remove("back-primary-dark");
+                current_li[choice] = (current_li[choice] < list_items.length - 1) ? ++current_li[choice] : list_items.length - 1;
+                list_items[current_li[choice]].classList.add("back-primary-dark");
+                break;
+        }
+    }
+}

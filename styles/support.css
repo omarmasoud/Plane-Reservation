@@ -38,3 +38,19 @@
     background-color: #3799f0;
     border: 2px solid #e8cb4a;
 }
+.title
+{
+    margin-left: 50%;
+}
+.desc
+{
+    background-color: rgb(200, 200, 200);
+    margin: 2%;
+    border: solid 1px black;
+}
+.resp
+{
+    background-color: rgb(200, 200, 200);
+    margin: 2%;
+    border: solid 1px black;
+}

@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/booking.css">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>A pool of most convinient flight</title>
 </head>
 
@@ -17,6 +20,9 @@
         <form action="./Booking.html" method="get">
 
             <fieldset style="width:max-content ;border:4px #3799F0 solid; border-radius: 10%;">
+                <legend
+                        style="font-size:x-large; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                        Select your preferable options</legend>
                 <label for="oneway">Oneway</label>
                 <input type="radio" name="oneway" id="oneway" checked onclick="showoneway()">
                 <label for="fulltrip">Full Trip?</label>
@@ -26,45 +32,70 @@
                 <br>
                 <hr style="color: dimgray">
                 <div id="onewaydiv">
-                    <legend
-                        style="font-size:x-large; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
-                        Select your preferable options</legend>
-                    <label for="from">From:</label>
-                    <select name="from" id="from">
+                    
+
+                    <div class="BookingItemDiv"> 
+                        <i class="fa-solid fa-plane-departure fa-xl"></i>
+                        <label for="from">From:</label>
+                        <select name="from" id="from">
                         <option value="opt1">cairo</option>
                         <option value="opt2">Athens</option>
                     </select>
-                    <label for="To">To:</label>
-                    <select name="to" id="from">
+                    </div>
+                    <div class="BookingItemDiv">
+                        <i class="fa-solid fa-plane-arrival fa-xl"></i>
+                        <label for="To">To:</label>
+                        <select name="to" id="from">
                         <option value="opt1">cairo</option>
                         <option value="opt2">Athens</option>
                     </select>
-                    <label for="budget">Maximum budget?:</label>
-                    <input type="text" placeholder="what is your maximum budget?">
-                    <label for="Timing">Timing:</label>
-                    <input type="datetime-local" />
+                    </div>
+                    <div class="BookingItemDiv">
+                        <i class="fa-solid fa-wallet fa-xl"></i>
+                        <label for="budget">Maximum budget?:</label>
+                        <input type="text" placeholder="what is your maximum budget?">
+                    </div>
+                    <div class="BookingItemDiv">
+                        <i class="fa-regular fa-calendar-check fa-xl"></i>
+                        <label for="Timing">Timing:</label>
+                        <input type="datetime-local" />
+                    </div>
+                    
                     <button>View Flights</button>
                 </div>
-                <div id="fulltripdiv" style="display:none">
-                    <legend
-                        style="font-size:x-large; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
-                        Select your preferable options for the going trip</legend>
-                    <label for="from">From:</label>
-                    <select name="from" id="from2">
+                <div id="fulltripdiv" style="display:none; width: 800px;">
+
+                    <div class="BookingItemDiv">
+                        <i class="fa-solid fa-plane-departure fa-xl"></i>
+                        <label for="from">From:</label>
+                        <select name="from" id="from2">
                         <option value="opt1">cairo</option>
                         <option value="opt2">Athens</option>
                     </select>
-                    <label for="To">To:</label>
-                    <select name="to" id="to2">
-                        <option value="opt1">cairo</option>
-                        <option value="opt2">Athens</option>
-                    </select>
-                    <h3>select date for backward trip</h2>
-                    <label for="Timing">Timing:</label>
-                    <input type="datetime-local" />
-                    <h3>Overall budget?</h2>
-                    <label for="budget">Maximum budget for whole trip?:</label>
-                    <input type="text" placeholder="what is your maximum budget?">
+                    </div>
+                    <div class="BookingItemDiv">
+                        <i class="fa-solid fa-plane-arrival fa-xl"></i>
+                        <label for="To">To:</label>
+                        <select name="to" id="to2">
+                            <option value="opt1">cairo</option>
+                            <option value="opt2">Athens</option>
+                        </select>
+                    </div>
+                   
+                    <h3>select date for backward trip <i class="fa-regular fa-calendar-check fa-xl"></i></h2>
+                        
+                        <div class="BookingItemDiv">
+                            <label for="Timing">Timing:</label>
+                            <input type="datetime-local" />
+                        </div>
+                   
+                    <h3>Overall budget? <i class="fa-solid fa-wallet fa-xl"></i></h2>
+                        
+                        <div class="BookingItemDiv">
+                            <label for="budget">Maximum budget for whole trip?:</label>
+                            <input type="text" placeholder="what is your maximum budget?">
+                        </div>
+                    
                     <button>View Flights</button>
                 </div>
 

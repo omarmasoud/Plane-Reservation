@@ -1,0 +1,36 @@
+.BookingItemDiv{
+    display: block;
+    margin: 10px;
+    border: 4px #2375be solid;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 15%;
+    background-color: #3799f0;
+    text-align: begin;
+    word-spacing:5px;
+    align-items: center;
+}
+.BookingItemDiv>i,label{
+    padding: 10px;
+}
+.BookingItemDiv:hover{
+    background-color: #2375be;
+    border-radius: 30%;
+    height: max-content;
+    width: max-content;
+}
+.BookingItemDiv>input:hover,select:hover{
+    background-color: #7abcf5;
+}
+button{
+    background-color: #8f78e2;
+    border: #2375be;
+    text-align: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 50px;
+}
+
+button:hover{
+    background-color: #7357db;
+}

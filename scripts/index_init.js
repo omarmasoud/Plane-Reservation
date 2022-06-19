@@ -59,6 +59,7 @@ function init_index() {
         if (e.target && e.target.matches("li")) {
             select_suggestion(e.target, "to");
             hide_suggestions("to");
+            to_countries.blur();
         }
     });
     

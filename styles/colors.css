@@ -12,20 +12,12 @@
     color: #7abcf5;
 }
 
-.secondary-dark {
-    color: #4727b9;
-}
-
 .secondary {
-    color: #7357db;
-}
-
-.secondary-light {
-    color: #8f78e2;
+    color: white;
 }
 
 .accent {
-    color: #e8cb4a;
+    color: #7357db;
 }
 
 /* Background colors theme (back-xxx) */
@@ -42,18 +34,10 @@
     background-color: #7abcf5;
 }
 
-.back-secondary-dark {
-    background-color: #4727b9;
-}
-
 .back-secondary {
-    background-color: #7357db;
-}
-
-.back-secondary-light {
-    background-color: #8f78e2;
+    background-color: white;
 }
 
 .back-accent {
-    background-color: #e8cb4a;
+    background-color: #7357db;
 }

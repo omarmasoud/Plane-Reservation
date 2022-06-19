@@ -43,15 +43,29 @@ function toggle_destination_color(focus, choice) {
     const dropdown = document.getElementById(`${choice}_dropdown`);
     const search = document.getElementById(`${choice}_search`);
     if (focus == "in") {
-        dropdown.style.backgroundColor = "#3799F0";
-        document.getElementById(`${choice}_label`).style.color = "white";
-        search.style.backgroundColor = "#3799F0";
-        search.style.color = "white";
+        dropdown.classList.add("back-primary");
+        dropdown.classList.remove("back-secondary");
+
+        document.getElementById(`${choice}_label`).classList.add("secondary");
+        document.getElementById(`${choice}_label`).classList.remove("primary");
+
+        search.classList.add("back-primary");
+        search.classList.remove("back-secondary");
+
+        search.classList.remove("primary");
+        search.classList.add("secondary");
     }
     else {
-        dropdown.style.backgroundColor = "white";
-        document.getElementById(`${choice}_label`).style.color = "#3799F0";
-        search.style.backgroundColor = "white";
-        search.style.color = "#3799F0";
+        dropdown.classList.remove("back-primary");
+        dropdown.classList.add("back-secondary");
+
+        document.getElementById(`${choice}_label`).classList.remove("secondary");
+        document.getElementById(`${choice}_label`).classList.add("primary");
+
+        search.classList.remove("back-primary");
+        search.classList.add("back-secondary");
+
+        search.classList.add("primary");
+        search.classList.remove("secondary");
     }
 }

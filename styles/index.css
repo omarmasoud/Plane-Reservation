@@ -1,36 +1,28 @@
-#uppercontainer {
-    margin-left: auto;
-    margin-right: auto;
+label {
+    color: #3799F0;
 }
 
-.containerelements {
-    width: 300px;
-    height: 300px;
-    margin: 30px;
-    border: 2px black solid;
-    text-align: justify;
+#from_to_box {
+    margin: 64px;
     padding: 16px;
-    grid-area: containerelements;
+    background-color: white;
+    border-radius: 16px;
+    height: 400px;
+
+    border: 2px solid #3799F0;
+    box-shadow: 0px 2px 6px #2375BE;
 }
 
-.containerelements>h2 {
-    font-size: 30px;
-    text-shadow: 1px 1px dimgray;
-    color: dimgrey;
-
+.search_box {
+    width: 100%;
+    margin: 0;
 }
 
-.containerelements:hover {
-    background-color: cadetblue;
-
+.suggestions_box {
+    display: none;
 }
 
-.containerelements>h2:hover {
-    color: black;
-}
-
-.containerelements>p,a {
-    
-    font-size: 20px;
-    color: darkslategrey;
+.countries_list {
+    list-style-type: none;
+    padding: 0;
 }

@@ -1,0 +1,13 @@
+.card-style {
+    border-width: 0;
+    background-color: #7abcf5; 
+    border-radius: 12px;
+}
+
+.card-image {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 12px;
+    border-color: #8f78e2;
+
+}

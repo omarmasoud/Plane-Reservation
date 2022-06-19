@@ -19,12 +19,13 @@
 
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/colors.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
     <div>
-        <header class="header">
+        <header class="header back-primary">
             <img class="mainlogo" src="./media/logo.svg" alt="logo" >
             
             <nav class="navmenu headmenu">
@@ -47,45 +48,74 @@
             <div id="from_to_box">
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-6" style="text-align: center;">
-                            <input type="radio" name="oneway-round" checked="checked" value="round" autocomplete="off">
-                            <label for="oneway-round">Round Trip</label>
-                        </div>
-                        <div class="col-md-6" style="text-align: center;">
-                            <input type="radio" name="oneway-round" value="oneway" autocomplete="off">
-                            <label for="oneway-round">One-way</label>
+                        <div class="col-md-12" style="display: flex; justify-content: center;">
+
+                            <span class="label">
+                                <input type="radio" name="oneway-round" checked="checked" value="round" autocomplete="off">
+                                <label for="oneway-round" class="primary">Round Trip</label>
+                            </span>
+
+                            <span class="label">
+                                <input type="radio" name="oneway-round" value="oneway" autocomplete="off">
+                                <label for="oneway-round" class="primary">One-way</label>
+                            </span>
+
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col-md-5">
-                            <div id="from_dropdown">
-                                <input type="text" 
-                                       placeholder="From" 
-                                       id="from_search" 
-                                       class="search_box"
-                                       onkeyup="filter_search(`from`)"
-                                       onfocus="show_suggestions(`from`)"
-                                       autocomplete="off">
-                                <div id="from_suggestions" class="suggestions_box">
-                                    <ul id="from_countries" class="countries_list" tabindex="0"></ul>
+                            <div id="from_dropdown" class="dropdown">
+                                <div>
+
+                                    <label for="from" id="from_label" class="destination_label primary">
+                                        <i class="fa-solid fa-plane-departure"></i> From
+                                    </label> 
+                                    <input type="text" 
+                                           placeholder="City/Airport" 
+                                           id="from_search" 
+                                           class="search_box"
+                                           name="from"
+                                           onkeyup="filter_search(`from`)"
+                                           onfocus="show_suggestions(`from`)"
+                                           autocomplete="off">
+    
+                                    <div id="from_suggestions" class="suggestions_box">
+                                        <ul id="from_countries" class="countries_list" tabindex="0"></ul>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2">
-                            <button class="btn" onclick="swap_airports()"><i class="fa-solid fa-arrows-rotate"></i></button>
+
+                        <div class="col-md-2" style="display: flex; text-align: center; justify-content: center;">
+                            <button class="btn" onclick="swap_airports()">
+                                <i class="fa-solid fa-arrows-rotate" style="color: #3799F0;"></i>
+                            </button>
                         </div>
+
                         <div class="col-md-5">
-                            <div id="to_dropdown">
-                                <input type="text" 
-                                       placeholder="To" 
-                                       id="to_search" 
-                                       class="search_box"
-                                       onkeyup="filter_search(`to`)"
-                                       onfocus="show_suggestions(`to`)"
-                                       autocomplete="off">
-                                <div id="to_suggestions" class="suggestions_box">
-                                    <ul id="to_countries" class="countries_list" tabindex="0"></ul>
+                            <div id="to_dropdown" class="dropdown">
+                                <div>
+
+                                    <label for="to" id="to_label" class="destination_label primary">
+                                        <i class="fa-solid fa-plane-arrival"></i> To
+                                    </label> 
+                                    <input type="text" 
+                                           placeholder="City/Airport" 
+                                           id="to_search" 
+                                           class="search_box"
+                                           name="to"
+                                           onkeyup="filter_search(`to`)"
+                                           onfocus="show_suggestions(`to`)"
+                                           autocomplete="off">
+                                           
+                                    <div id="to_suggestions" class="suggestions_box">
+                                        <ul id="to_countries" class="countries_list" tabindex="0"></ul>
+                                    </div>
+                                    
                                 </div>
+
                             </div>
                         </div>
                     </div>

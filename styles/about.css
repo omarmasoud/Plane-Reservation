@@ -30,5 +30,15 @@ table
     text-align: center;
     width: 250px;
     background-color: #7ABCF5;
-    color:black
+    color:black;
+    border: 2px solid #E8CB4A;
+    height: 250px;
+}
+.card img
+{
+    margin: auto;
+}
+.id
+{
+    margin-top: 5px
 }

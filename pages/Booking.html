@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +8,87 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <title>A pool of most convinient flight</title>
 </head>
+
 <body>
     <div style="text-align: center; color:azure">
         <a href="../index.html"> Back to home </a>
     </div>
     <div class="container" style="position:relative;  left:25% ; vertical-align: middle; width: min-contenta;">
         <form action="./Booking.html" method="get">
-            <fieldset style="width:max-content ;border:4px #3799F0 solid; border-radius: 10%;" >
-                <legend style="font-size:x-large; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Select your preferable options</legend>
-                <label for="from">From:</label>
-                <select name="from" id="from">
-                    <option value="opt1">cairo</option>
-                    <option value="opt2">Athens</option>
-                </select>   
-                <label for="To">To:</label>
-                <select name="to" id="from">
-                    <option value="opt1">cairo</option>
-                    <option value="opt2">Athens</option>
-                </select> 
-                <label for="budget">Maximum budget?:</label>
-                <input type="text" placeholder="what is your maximum budget?">
-                <label for="Timing">Timing:</label>
-                <input type="datetime-local"/>
-                <button>View Flights</button>
+
+            <fieldset style="width:max-content ;border:4px #3799F0 solid; border-radius: 10%;">
+                <label for="oneway">Oneway</label>
+                <input type="radio" name="oneway" id="oneway" checked onclick="showoneway()">
+                <label for="fulltrip">Full Trip?</label>
+                <input type="radio" name="fulltrip" id="fulltrip" onclick="showfulltrip()">
+                <!-- <label for="transit">transit?</label>
+                <input type="radio" name="transit" id="transit" onclick="showtransit()"> -->
+                <br>
+                <hr style="color: dimgray">
+                <div id="onewaydiv">
+                    <legend
+                        style="font-size:x-large; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                        Select your preferable options</legend>
+                    <label for="from">From:</label>
+                    <select name="from" id="from">
+                        <option value="opt1">cairo</option>
+                        <option value="opt2">Athens</option>
+                    </select>
+                    <label for="To">To:</label>
+                    <select name="to" id="from">
+                        <option value="opt1">cairo</option>
+                        <option value="opt2">Athens</option>
+                    </select>
+                    <label for="budget">Maximum budget?:</label>
+                    <input type="text" placeholder="what is your maximum budget?">
+                    <label for="Timing">Timing:</label>
+                    <input type="datetime-local" />
+                    <button>View Flights</button>
+                </div>
+                <div id="fulltripdiv" style="display:inline">
+                    <legend
+                        style="font-size:x-large; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                        Select your preferable options for the going trip</legend>
+                    <label for="from">From:</label>
+                    <select name="from" id="from2">
+                        <option value="opt1">cairo</option>
+                        <option value="opt2">Athens</option>
+                    </select>
+                    <label for="To">To:</label>
+                    <select name="to" id="to2">
+                        <option value="opt1">cairo</option>
+                        <option value="opt2">Athens</option>
+                    </select>
+                    <h3>select date for backward trip</h2>
+                    <label for="Timing">Timing:</label>
+                    <input type="datetime-local" />
+                    <h3>Overall budget?</h2>
+                    <label for="budget">Maximum budget for whole trip?:</label>
+                    <input type="text" placeholder="what is your maximum budget?">
+                    <button>View Flights</button>
+                </div>
+
             </fieldset>
+
         </form>
         <div id="tableholder">
             <!---to put and list available flights in here from database or api-->
         </div>
     </div>
-    
-    
 
+
+
+    <script>
+        function showoneway() {
+
+        }
+        function showfulltrip() {
+
+        }
+        // function showtransit() {
+
+        // }
+    </script>
 </body>
+
 </html>

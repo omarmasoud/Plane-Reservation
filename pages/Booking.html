@@ -80,9 +80,14 @@
 
     <script>
         function showoneway() {
-
+            document.getElementById("fulltrip").checked=false;
+            document.getElementById("onewaydiv").style.display="block";
+            document.getElementById("fulltripdiv").style.display="none";
         }
         function showfulltrip() {
+            document.getElementById("fulltripdiv").style.display="block";
+            document.getElementById("onewaydiv").style.display="none";
+            document.getElementById("oneway").checked=false;
 
         }
         // function showtransit() {

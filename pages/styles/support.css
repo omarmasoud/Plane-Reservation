@@ -1,0 +1,38 @@
+.sidebar
+{
+    background-color: #4727B9;
+    width: 8%;
+    height: 85%;
+    float: left;
+}
+.sidebar div
+{
+    color: rgb(220, 220, 220);
+}
+.sidebar div:hover
+{
+    color: #8f78e2;
+}
+.sidebar div:active
+{
+    color: #e8cb4a;
+}
+#ticketcreation
+{
+    margin: 3%;
+    margin-left: 10%;
+    float: left;
+}
+#showtickets
+{
+    margin: 3%;
+    margin-left: 10%;
+    float: left;
+}
+.ticket
+{
+    margin: 10px;
+    width: 500px;
+    background-color: #3799f0;
+    border: 2px solid #e8cb4a;
+}

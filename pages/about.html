@@ -11,12 +11,12 @@
         function unhide(id)
         {
             console.log(id);
-            document.getElementById(id).hidden = false;
+            document.getElementById(id).style.visibility = 'visible';
         }
         function hide(id)
         {
             console.log(id);
-            document.getElementById(id).hidden = true;
+            document.getElementById(id).style.visibility = 'hidden';
         }
     </script>
 </head>
@@ -55,15 +55,15 @@
             <td onmouseover="unhide('5')">Omar Masoud</td>
         </tr>
         <tr class="cards">
-            <td id="1" hidden="ture" onmouseleave="hide('1')">18P9613@eng.asu.edu.eg <br>
+            <td id="1" style="visibility: hidden ;" onmouseleave="hide('1')">18P9613@eng.asu.edu.eg <br>
             <img src="" alt="put pic here"><br> additional info idk</td>
-            <td id="2" hidden="ture" onmouseleave="hide('2')">18P8805@eng.asu.edu.eg <br>
+            <td id="2" style="visibility: hidden ;" onmouseleave="hide('2')">18P8805@eng.asu.edu.eg <br>
             <img src="" alt="put pic here"><br> additional info idk</td>
-            <td id="3" hidden="ture" onmouseleave="hide('3')">18P8083@eng.asu.edu.eg <br>
+            <td id="3" style="visibility: hidden ;" onmouseleave="hide('3')">18P8083@eng.asu.edu.eg <br>
             <img src="" alt="put pic here"><br> additional info idk</td>
-            <td id="4" hidden="ture" onmouseleave="hide('4')">1807211@eng.asu.edu.eg <br>
+            <td id="4" style="visibility: hidden ;" onmouseleave="hide('4')">1807211@eng.asu.edu.eg <br>
             <img src="" alt="put pic here"><br> additional info idk</td>
-            <td id="5" hidden="ture" onmouseleave="hide('5')">18P3067@eng.asu.edu.eg <br>
+            <td id="5" style="visibility: hidden ;" onmouseleave="hide('5')">18P3067@eng.asu.edu.eg <br>
             <img src="" alt="put pic here"><br> additional info idk</td>
         </tr>
     </table>

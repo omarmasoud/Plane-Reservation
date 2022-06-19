@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/support.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function setstate(state)
+        {
+            switch (state) {
+                case "create":
+                    document.getElementById("ticketcreation").hidden = false;
+                    document.getElementById("showtickets").hidden = true;
+                    break;
+                case "display":
+                    document.getElementById("ticketcreation").hidden = true;
+                    document.getElementById("showtickets").hidden = false;
+                    break;
+            }
+        }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -26,8 +41,47 @@
             <a href="../pages/forgotpass.html">Sign up</a>
         </div>
     </header>
-    <div class="sidebar">
-        <a href="">submit ticket</a> <br>
-        <a href="">my tickets</a>
+    <div class="contain">
+        <div class="sidebar">
+            <div onclick=" setstate('create')">submit ticket</div>
+            <div onclick=" setstate('display')">my tickets</div>
+        </div>
+        <div id="ticketcreation">
+            <form action="post">
+                <fieldset>
+                    <legend>create your ticket</legend>
+                    <label for="title">title of your ticket</label>
+                    <input type="text" name="title" id="title">
+                    <br>
+                    <label for="description">describe your problem for support</label>
+                    <br>
+                    <textarea name="decription" id="decription" cols="30" rows="10"></textarea>
+                    <br>
+                    <button type="submit">submit</button>
+                </fieldset>
+            </form>
+        </div>
+        <div id="showtickets" hidden= "true">
+            <div class="ticket">title <br>
+                <p>description</p>
+                <p>response</p>
+            </div>
+            <div class="ticket">title <br>
+                <p>description</p>
+                <p>response</p>
+            </div>
+            <div class="ticket">title <br>
+                <p>description</p>
+                <p>response</p>
+            </div>
+            <div class="ticket">title <br>
+                <p>description</p>
+                <p>response</p>
+            </div>
+            <div class="ticket">title <br>
+                    <p>description</p>
+                    <p>response</p>
+            </div>
+        </div>
     </div>
 </body>

@@ -25,9 +25,10 @@ table
 {
     color: #E8CB4A;
 }
-.cards td
+.card
 {
     text-align: center;
     width: 250px;
     background-color: #7ABCF5;
+    color:black
 }

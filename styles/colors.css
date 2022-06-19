@@ -1,0 +1,59 @@
+/* Foreground colors theme */
+
+.primary-dark {
+    color: #2375be;
+}
+
+.primary {
+    color: #3799f0;
+}
+
+.primary-light {
+    color: #7abcf5;
+}
+
+.secondary-dark {
+    color: #4727b9;
+}
+
+.secondary {
+    color: #7357db;
+}
+
+.secondary-light {
+    color: #8f78e2;
+}
+
+.accent {
+    color: #e8cb4a;
+}
+
+/* Background colors theme (back-xxx) */
+
+.back-primary-dark {
+    background-color: #2375be;
+}
+
+.back-primary {
+    background-color: #3799f0;
+}
+
+.back-primary-light {
+    background-color: #7abcf5;
+}
+
+.back-secondary-dark {
+    background-color: #4727b9;
+}
+
+.back-secondary {
+    background-color: #7357db;
+}
+
+.back-secondary-light {
+    background-color: #8f78e2;
+}
+
+.back-accent {
+    background-color: #e8cb4a;
+}

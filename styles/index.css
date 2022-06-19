@@ -8,7 +8,7 @@
 }
 
 #from_to_box {
-    height: 272px;
+    height: 280px;
     margin: 64px;
     padding: 16px;
     border-radius: 16px;
@@ -20,14 +20,14 @@
 .dropdown {
     display: flex;
     align-items: center;
-    height: 180px;
+    height: 188px;
     padding: 8px;
     transition: all 0.3s;
 }
 
 .label {
-    margin: 16px; 
-    margin-top: 0;
+    margin-right: 16px; 
+    margin-left: 16px; 
 }
 
 .destination_label {
@@ -55,14 +55,19 @@
 }
 
 .suggestions_box.visible {
-    height: 72px; 
+    height: 80px; 
     opacity: 1;
     transition: all 300ms;
 }
 
 .countries_list {
-    height: 72px;
+    height: 80px;
     overflow: auto;
     list-style-type: none;
     padding: 4px;
+}
+
+.countries_list li {
+    padding: 4px;
+    cursor: pointer;
 }

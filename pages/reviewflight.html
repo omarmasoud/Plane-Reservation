@@ -17,21 +17,26 @@
             display: inline;
             text-align: center;
             border-radius: 15px;
-            padding: 60px;
-            margin: 20px;
+            padding: 80px;
+            padding-top: 60px;
+            margin: 30px;
             border: 2px gray solid;
             box-shadow: 2px 2px gray;
         }
 
         div {
             text-align: center;
-            
+
         }
-       .calendarhead{
-        
-        margin: 15px;
-       }
-       .horizontalCalendar.below{display: block;}
+
+        .calendarhead {
+
+            margin: 15px;
+        }
+
+        .horizontalCalendar.below {
+            display: block;
+        }
 
         .leftborder {
             display: inline;
@@ -58,6 +63,9 @@
         .innercalendar {
             display: inline;
             text-align: center;
+            border: 1px gray solid;
+            border-radius: 5px;
+            margin: 10px;
 
         }
 
@@ -86,20 +94,38 @@
             background-color: #7abcf5;
 
         }
-        .footerbuttons{
+
+        .footerbuttons {
             vertical-align: middle;
             text-align: center;
-            
+
         }
-        .footerbuttons>button{
+
+        .footerbuttons>button {
             background-color: #7357db;
             padding: 40px;
             border: 1px #2375be solid;
             border-radius: 10px;
-            margin-top: -70px;
+            margin-top: 0px;
             margin-left: 200px;
             margin-right: 200px;
             margin-bottom: 40px;
+        }
+
+        .timeline {
+            display: inline;
+            text-align: center;
+
+        }
+
+        .timeline * {
+
+            display: inline;
+        }
+
+        .timeline hr {
+            display: inline-block;
+            width: 5%;
         }
     </style>
 </head>
@@ -119,7 +145,7 @@
                     day = 6 + i - 1;
                 else
                     day = i
-                var elem = "<div>" + weekday[today.getDay() + day] + " " + eval(today.getDate()+i) + "/" + today.getMonth() + "/" + today.getFullYear() + "</div>";
+                var elem = "<div>" + weekday[today.getDay() + day] + " " + eval(today.getDate() + i) + "/" + today.getMonth() + "/" + today.getFullYear() + "</div>";
                 calendar.innerHTML += elem;
             }
             for (var i = 0; i < 2; i++) {
@@ -128,7 +154,7 @@
                     day = 6 - i + 1;
                 else
                     day = i
-                var elem = "<div>" + weekday[today.getDay() + day] + " " + eval(today.getDate()+i) + "/" + today.getMonth() + "/" + today.getFullYear() + "</div>";
+                var elem = "<div>" + weekday[today.getDay() + day] + " " + eval(today.getDate() + i) + "/" + today.getMonth() + "/" + today.getFullYear() + "</div>";
                 calendar.innerHTML += elem;
             }
         }
@@ -171,27 +197,52 @@
                             <script>constructHorizontalCalendar(0);</script>
                         </div>
                         <button class="flatbtn"> <i class="fa-solid fa-angle-right fa-2xl"></i></button>
-                        <div class="leftborder">
-                            <h3>Flight #</h3>
-                            <h4>31323</h4>
-                        </div>
-                        <div class="leftborder">
-                            <h3> Carrier</h3>
-                            <h4>Egyptair</h4>
-                        </div>
-                        <div class="leftborder">
-                            <h3> Price</h3>
-                            <h4>$234</h4>
-                        </div>
-                        <div class="leftborder">
-                            <h3>Seat#</h3>
-                            <h4>102</h4>
-                        </div>
-                        <div class="leftborder">
-                            <h3>Name</h3>
-                            <h4>Alex M.</h4>
-                        </div>
+
                     </div>
+                </div>
+                
+                <div class="flightdetails">
+                    <div class="leftborder" style="border:none;">
+                        <h3>Flight #</h3>
+                        <h4>31323</h4>
+                    </div>
+                    <div class="leftborder">
+                        <h3> Carrier</h3>
+                        <h4>Egyptair</h4>
+                    </div>
+                    <div class="leftborder">
+                        <h3> Price</h3>
+                        <h4>$234</h4>
+                    </div>
+                    <div class="leftborder">
+                        <h3>Seat#</h3>
+                        <h4>102</h4>
+                    </div>
+                    <div class="leftborder">
+                        <h3>Name</h3>
+                        <h4>Alex M.</h4>
+                    </div>
+                </div>
+                <br>
+                <div class="timeline">
+                    <div class="leftborder" style="border: none;">
+                        <h3>Departure Time:</h3>
+                        <h4>11:00 pm</h4>
+                        <h5>City2</h5>
+                    </div>
+                    <hr>
+                    <div class="leftborder">
+                        <i class="fa-solid fa-plane-departure  fa-flip-horizontal fa-2xl "></i>
+                        <h5>ETA</h5>
+                    </div>
+                    <hr>
+                    <div class="leftborder">
+                        <h3>Arrival Time:</h3>
+                        <h4>3:40 1m</h4>
+                        <h5>City1</h5>
+
+                    </div>
+
                 </div>
             </div>
             <br>
@@ -212,10 +263,11 @@
                         <div class="innercalendar">
                             <script>constructHorizontalCalendar(1);</script>
                         </div>
-
-
                         <button class="flatbtn"><i class="fa-solid fa-angle-right fa-2xl"></i></button>
-                        <div class="leftborder">
+
+                    </div>
+                    <div class="flightdetails">
+                        <div class="leftborder" style="border: none;">
                             <h3>Flight #</h3>
                             <h4>42112</h4>
                         </div>
@@ -236,9 +288,34 @@
                             <h4>Alex M.</h4>
                         </div>
                     </div>
+                    <br>
+                    <div class="timeline">
+                        <div class="leftborder" style="border: none;">
+                            <h3>Departure Time:</h3>
+                            <h4>11:00 pm</h4>
+                            <h5>City2</h5>
+                        </div>
+                        <hr>
+                        <div class="leftborder">
+                            <i class="fa-solid fa-plane-departure fa-flip-horizontal fa-2xl"></i>
+                            <h5>ETA</h5>
+                        </div>
+                        <hr>
+                        <div class="leftborder">
+                            <h3>Arrival Time:</h3>
+                            <h4>3:40 1m</h4>
+                            <h5>City1</h5>
+
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
+            <br>
+
         </div>
+
 
         <div class="footerbuttons">
             <button>
@@ -248,7 +325,7 @@
                 Proceed
             </button>
         </div>
-      
+
         <footer class="footer">
             <div class="navmenu footmenu">
                 <a href="./pages/about.html">Contact</a>

@@ -88,3 +88,6 @@ h2 {
     }
   } */
   
+  .no_padding {
+    padding: 0 !important;
+  }

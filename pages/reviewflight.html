@@ -31,6 +31,7 @@
         
         margin: 15px;
        }
+       .horizontalCalendar.below{display: block;}
 
         .leftborder {
             display: inline;
@@ -112,22 +113,22 @@
 
             var calendar = document.getElementsByClassName('innercalendar')[calendarNumber];
             calendar.innerHTML = "";
-            for (var i = -2; i < 0; i++) {
+            for (var i = -1; i < 0; i++) {
                 var day;
                 if (i < 0)
                     day = 6 + i - 1;
                 else
                     day = i
-                var elem = "<div>" + weekday[today.getDay() + day] + " " + today.getDate() + "/" + today.getMonth() + "/" + today.getFullYear() + "</div>";
+                var elem = "<div>" + weekday[today.getDay() + day] + " " + eval(today.getDate()+i) + "/" + today.getMonth() + "/" + today.getFullYear() + "</div>";
                 calendar.innerHTML += elem;
             }
-            for (var i = 0; i < 3; i++) {
+            for (var i = 0; i < 2; i++) {
                 var day;
                 if (i > 6)
                     day = 6 - i + 1;
                 else
                     day = i
-                var elem = "<div>" + weekday[today.getDay() + day] + " " + today.getDate() + "/" + today.getMonth() + "/" + today.getFullYear() + "</div>";
+                var elem = "<div>" + weekday[today.getDay() + day] + " " + eval(today.getDate()+i) + "/" + today.getMonth() + "/" + today.getFullYear() + "</div>";
                 calendar.innerHTML += elem;
             }
         }
@@ -182,6 +183,14 @@
                             <h3> Price</h3>
                             <h4>$234</h4>
                         </div>
+                        <div class="leftborder">
+                            <h3>Seat#</h3>
+                            <h4>102</h4>
+                        </div>
+                        <div class="leftborder">
+                            <h3>Name</h3>
+                            <h4>Alex M.</h4>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -217,6 +226,14 @@
                         <div class="leftborder">
                             <h3> Price</h3>
                             <h4>$322</h4>
+                        </div>
+                        <div class="leftborder">
+                            <h3>Seat#</h3>
+                            <h4>102</h4>
+                        </div>
+                        <div class="leftborder">
+                            <h3>Name</h3>
+                            <h4>Alex M.</h4>
                         </div>
                     </div>
                 </div>

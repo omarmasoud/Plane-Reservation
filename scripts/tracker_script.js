@@ -1,4 +1,4 @@
-var key = 'ee36046b-850e-4505-9dc5-574a2e4d15b5';
+var key = 'f5677423-2c75-46a4-ad37-ed15bf511b06';
 
 var flightsArr = [];
 // Initialize and add the map

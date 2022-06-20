@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/support.css">
+    <link rel="stylesheet" href="../styles/colors.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         function setstate(state)
@@ -24,7 +25,7 @@
     </script>
 </head>
 <body>
-    <header class="header">
+    <header class="header back-primary">
         <img class="mainlogo" src="../media/logo.svg" alt="logo" >
         
         <nav class="navmenu headmenu">
@@ -32,14 +33,14 @@
             <a href="../pages/payment.html">Payment Methods</a>
             <a href="../pages/about.html">Contact</a>
             <a href="../pages/about.html">About</a>
-            <a href="../pages/Booking.html">Book a Flight</a>
+            <!-- <a href="./pages/Booking.html">Book a Flight</a> -->
             <a href="../pages/support.html">Support</a>
             <a href="#blog">Blog</a>
         </nav>
 
         <div class="navmenu headmenu">
-            <a href="./pages/login.html">Login</a>
-            <a href="./pages/forgotpass.html">Sign up</a>
+            <a href="../pages/login.html">Login</a>
+            <a href="../pages/forgotpass.html">Sign up</a>
         </div>
     </header>
     <div class="contain">
@@ -50,22 +51,21 @@
         <div id="ticketcreation">
             <form action="post">
                 <fieldset>
-                    <legend style="text-align: center;">create your ticket</legend>
-                    <label for="title">title of your ticket</label>
-                    <input type="text" name="title" id="titlebar">
+                    <legend style="text-align: center;">Create Your Ticket</legend>
+                    <label for="titlebar">title your ticket</label>
+                    <input type="text" name="titlebar" id="titlebar">
                     <br>
                     <label for="description">describe your problem for support</label>
+                    <textarea name="decription" id="decription" cols="120" rows="12"></textarea>
                     <br>
-                    <textarea name="decription" id="decription" cols="30" rows="10"></textarea>
-                    <br>
-                    <button type="submit">submit</button>
+                    <button class="sub" type="submit">submit</button>
                 </fieldset>
             </form>
             <footer class="footer">
                 <div class="navmenu footmenu">
-                    <a href="./pages/about.html">Contact</a>
-                    <a href="./pages/about.html">About</a>
-                    <a href="./pages/support.html">Support</a>
+                    <a href="../pages/about.html">Contact</a>
+                    <a href="../pages/about.html">About</a>
+                    <a href="../pages/support.html">Support</a>
                     <a href="#blog">Blog</a>
                 </div>
             </footer>
@@ -91,20 +91,14 @@
                 <p class="desc">description</p>
                 <p class="resp">response</p>
             </div>
-            <div class="ticket">
-                <strong class="title"> title </strong><br>
-                <p class="desc">description</p>
-                <p class="resp">response</p>
-            </div>
             <footer class="footer">
                 <div class="navmenu footmenu">
-                    <a href="./pages/about.html">Contact</a>
-                    <a href="./pages/about.html">About</a>
-                    <a href="./pages/support.html">Support</a>
+                    <a href="../pages/about.html">Contact</a>
+                    <a href="../pages/about.html">About</a>
+                    <a href="../pages/support.html">Support</a>
                     <a href="#blog">Blog</a>
                 </div>
             </footer>
         </div>
     </div>
-    
 </body>

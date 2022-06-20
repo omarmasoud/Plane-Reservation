@@ -1,3 +1,7 @@
+body
+{
+    overflow: hidden;
+}
 .sidebar
 {
     background-color: #4727B9;
@@ -8,10 +12,13 @@
 .sidebar div
 {
     color: rgb(220, 220, 220);
+    margin-top: 10%;
+    background-color: #2c1b6a;
 }
 .sidebar div:hover
 {
     color: #8f78e2;
+    background-color: #253d8b;
 }
 .sidebar div:active
 {
@@ -19,21 +26,18 @@
 }
 #ticketcreation
 {
-    margin: 3%;
-    margin-left: 10%;
     float: left;
-    width: 70%;
+    width: 92%;
 }
 #showtickets
 {
-    margin: 3%;
-    margin-left: 10%;
     float: left;
-    width: 70%;
+    width: 92%;
 }
 .ticket
 {
-    margin: 10px;
+    margin: 2%;
+    margin-left: 33%;
     width: 500px;
     background-color: #3799f0;
     border: 2px solid #e8cb4a;
@@ -53,4 +57,34 @@
     background-color: rgb(200, 200, 200);
     margin: 2%;
     border: solid 1px black;
+}
+#titlebar
+{
+    width: 50%;
+    margin-top: 1%;
+}
+legend
+{
+    margin-left: 8%;
+    margin-top: 5%;
+    font-size: 42;
+    font-weight: bolder;
+}
+label
+{
+    margin-left: 20%;
+    font-size: 20;
+    font-weight: bold;
+}
+#decription
+{
+    margin-left: 20%;
+}
+.sub
+{
+    margin: 1%;
+    margin-left: 53%;
+    margin-bottom: 4.5%;
+    color: rgb(220, 220, 220);
+    background-color: #4727B9;
 }

@@ -21,7 +21,7 @@ to_countries.addEventListener("click", e => {
     if (e.target && e.target.matches("li")) {
         select_suggestion(e.target, "to");
         hide_suggestions("to");
-        to_countries.blur();
+        departure_date.focus();
     }
 });
 

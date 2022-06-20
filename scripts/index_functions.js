@@ -42,31 +42,36 @@ function swap_airports() {
 function toggle_destination_color(focus, choice) {
     const dropdown = document.getElementById(`${choice}_dropdown`);
     const search = document.getElementById(`${choice}_search`);
-    if (focus == "in") {
-        dropdown.classList.add("back-primary");
-        dropdown.classList.remove("back-secondary");
+    
+    switch (focus) {
+        case "in":
+            dropdown.classList.add("back-primary");
+            dropdown.classList.remove("back-secondary");
+        
+            document.getElementById(`${choice}_label`).classList.add("secondary");
+            document.getElementById(`${choice}_label`).classList.remove("primary");
+        
+            search.classList.add("back-primary");
+            search.classList.remove("back-secondary");
+        
+            search.classList.remove("primary");
+            search.classList.add("secondary");
+            break;
 
-        document.getElementById(`${choice}_label`).classList.add("secondary");
-        document.getElementById(`${choice}_label`).classList.remove("primary");
+        default:
+            dropdown.classList.remove("back-primary");
+            dropdown.classList.add("back-secondary");
+        
+            document.getElementById(`${choice}_label`).classList.remove("secondary");
+            document.getElementById(`${choice}_label`).classList.add("primary");
+        
+            search.classList.remove("back-primary");
+            search.classList.add("back-secondary");
+        
+            search.classList.add("primary");
+            search.classList.remove("secondary");
+            break;
 
-        search.classList.add("back-primary");
-        search.classList.remove("back-secondary");
-
-        search.classList.remove("primary");
-        search.classList.add("secondary");
-    }
-    else {
-        dropdown.classList.remove("back-primary");
-        dropdown.classList.add("back-secondary");
-
-        document.getElementById(`${choice}_label`).classList.remove("secondary");
-        document.getElementById(`${choice}_label`).classList.add("primary");
-
-        search.classList.remove("back-primary");
-        search.classList.add("back-secondary");
-
-        search.classList.add("primary");
-        search.classList.remove("secondary");
     }
 }
 
@@ -91,5 +96,19 @@ function list_arrow_traversal(e, list_items, choice) {
                 list_items[current_li[choice]].classList.add("back-primary-dark");
                 break;
         }
+    }
+}
+
+function show_hide_return_date(choice) {
+    let return_div = document.getElementById("return_div");
+
+    switch (choice) {
+        case "one":
+            return_div.classList.add("invisible");
+            break;
+
+        default:
+            return_div.classList.remove("invisible");
+            break;
     }
 }

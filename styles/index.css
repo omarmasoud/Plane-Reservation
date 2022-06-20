@@ -7,8 +7,13 @@
       to { opacity: 1; }
 }
 
+.centered_items {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
 #from_to_box {
-    height: 310px;
     margin: 64px;
     padding: 16px;
     border-radius: 16px;
@@ -20,9 +25,10 @@
 .dropdown {
     display: flex;
     align-items: center;
-    height: 228px;
-    padding: 8px;
+    height: 242px;
+    padding: 16px;
     transition: all 0.3s;
+    border-radius: 8px;
 }
 
 .label {
@@ -33,6 +39,8 @@
 .destination_label {
     font-size: 24px; 
     font-weight: bold;
+    width: 100%;
+    text-align: center;
 }
 
 .search_box {
@@ -55,13 +63,13 @@
 }
 
 .suggestions_box.visible {
-    height: 120px; 
+    height: 128px; 
     opacity: 1;
     transition: all 300ms;
 }
 
 .countries_list {
-    height: 120px;
+    height: 128px;
     overflow: auto;
     list-style-type: none;
     padding: 4px;
@@ -70,4 +78,36 @@
 .countries_list li {
     padding: 4px;
     cursor: pointer;
+}
+
+#submit_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    border-radius: 16px;
+}
+
+.date_box {
+    margin: 16px;
+}
+
+.date_input {
+    width: 100%;
+}
+
+#return_div {
+    height: 74px; 
+    width: auto;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+#return_div.invisible {
+    overflow: hidden;  /* Hide the element content, while height = 0 */
+    height: 0;
+    width: 0;
+    opacity: 0;
+    transition: all 0.5s;
+
 }

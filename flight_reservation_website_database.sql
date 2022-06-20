@@ -22,7 +22,29 @@ CREATE TABLE `flight` (
   `total_seats` int(11) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
   `available_seats` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `flight_times` (
+  `flight_time` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `passenger_profile` (
+  `profile_id` varchar(20) NOT NULL,
+  `pass_word` varchar(20) DEFAULT NULL,
+  `first_name` varchar(10) NOT NULL,
+  `last_name` varchar(10) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `tel_no` varchar(20) NOT NULL,
+  `email_id` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `ticket_info` (
+  `ticket_id` varchar(20) NOT NULL,
+  `profile_id` varchar(20) NOT NULL,
+  `flight_id` varchar(20) NOT NULL,
+  `departure_time` datetime NOT NULL,
+  `status` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `flight` (`flight_id`, `airline_id`, `airline_name`, `from_location`, `to_loaction`, `departure_time`, `arrival_time`, `duration`, `total_seats`, `price`, `available_seats`) VALUES
 ('AX812', NULL, NULL, NULL, NULL, '2022-06-20 01:23:13', NULL, NULL, NULL, NULL, NULL);
@@ -50,5 +72,4 @@ ALTER TABLE `credit_card_details`
 ALTER TABLE `ticket_info`
   ADD CONSTRAINT `ticket_info_ibfk_1` FOREIGN KEY (`flight_id`,`departure_time`) REFERENCES `flight` (`flight_id`, `departure_time`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ticket_info_ibfk_2` FOREIGN KEY (`profile_id`) REFERENCES `passenger_profile` (`profile_id`);
-
 COMMIT;

@@ -28,6 +28,8 @@ function init_index() {
         li.appendChild(document.createTextNode(airport));
         to_countries.appendChild(li);
     }
+
+    populate_suggested_flights();
 }
 
 init_index();

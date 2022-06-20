@@ -1,4 +1,3 @@
-const airports = ["CAI", "LAX", "SAU", "ALE"];
 const round_trip = document.getElementById("round_trip");
 const one_way = document.getElementById("one_way");
 const from_dropdown = document.getElementById("from_dropdown");

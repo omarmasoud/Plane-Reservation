@@ -1,0 +1,60 @@
+body
+{
+    text-align: center;
+}
+img
+{
+    height: 300px;
+    width: 300px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+label
+{
+    font-size: 24;
+}
+#username
+{
+    width: 10%;
+    height: 3%
+}
+#pass
+{
+    width: 10%;
+    height: 3%
+}
+.sub
+{
+    margin: 1%;
+    color: rgb(220, 220, 220);
+    background-color: #4727B9;
+    width: 5%;
+    height: 4%;
+    font-size: 18;
+}
+a
+{
+    margin: 1%;
+    font-size: 18;
+    color: rgb(220, 220, 220);
+}
+p
+{
+    margin: 1%;
+    font-size: 18;
+    color: rgb(220, 220, 220);
+}
+a:hover
+{
+    color: #E8CB4A;
+}
+.contain
+{
+    background-color: rgb(50, 50, 50);
+    margin-top: 9%;
+}
+.contain2
+{
+    background-color: rgb(50, 50, 50);
+    margin-top: 5%;
+}

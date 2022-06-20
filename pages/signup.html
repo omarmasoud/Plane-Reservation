@@ -1,32 +1,37 @@
 <html>
-    <header><!--insert style sheet here--></header>
-    <body style="background-color: aquamarine;">
-        <img id="mainlogo" src="media/initiallogo.png" alt="dashboard logo" style="text-align: center;">
-        <form action="?">
-            <label for="firstname">firstname:</label>
-            <input type="text" id="firstname">
-            <br>
-            <label for="lastname">lastname:</label>
-            <input type="text" id="lastname">
-            <br>
-            <label for="date">birthdate:</label>
-            <input type="date" id="date">
-            <br>
-            <label for="SSN">SSN:</label>
-            <input type="text" id="SSN">
-            <br>
-            <label for="username">username:</label>
-            <input type="text" id="username">
-            <br>
-            <label for="pass">password:</label>
-            <input type="password" id="pass">
-            <br>
-            <input type="submit">
-            <br>
+    <header>
+        <title>signup</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/login.css">
+    </header>
+    <body>
+        <img id="mainlogo" src="../media/logo.svg" alt="dashboard logo">
+        <div class="main">
+            <form action="?">
+                <label for="firstname">firstname:</label>
+                <input type="text" id="firstname">
+                <br>
+                <label for="lastname">lastname:</label>
+                <input type="text" id="lastname">
+                <br>
+                <label for="date">birthdate:</label>
+                <input type="date" id="date">
+                <br>
+                <label for="SSN">SSN:</label>
+                <input type="text" id="SSN">
+                <br>
+                <label for="username">username:</label>
+                <input type="text" id="username">
+                <br>
+                <label for="pass">password:</label>
+                <input type="password" id="pass">
+                <br>
+                <button type="submit" class="sub">signup</button>
+            </form>
+        </div>
+        <div class="contain2">
             <a href="./login.html">already have an account?</a>
-        </form>
+            <p> made by team 1 </p> 
+        </div>
     </body>
-    <footer> 
-        <p style="text-align: center;"> made by team ? </p> 
-    </footer>
 </html>

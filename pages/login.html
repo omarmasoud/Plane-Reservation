@@ -1,32 +1,26 @@
 <html>
     <header>
-        <style>
-             img{
-                    display: block;
-                    height: 300px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    width: 50%;
-                }
-        </style>
+        <title>login</title>
+        <link rel="stylesheet" href="../styles/login.css">
+        <link rel="stylesheet" href="../styles/styles.css">
     </header>
-    <body style="background-color: aquamarine;">
-        <img id="mainlogo" src="media/initiallogo.png" alt="dashboard logo">
+    <body>
+        <img id="mainlogo" src="../media/logo.svg" alt="dashboard logo">
         <form action="?" style="text-align: center;">
-            <label for="username">username</label>
+            <label for="username">Username</label>
             <input type="text" id="username">
             <br>
-            <label for="pass">password</label>
+            <label for="pass">Password</label>
             <input type="password" id="pass">
             <br>
-            <input type="submit">
+            <button type="submit" class="sub">Login</button>
             <br>
-            <a href="./signup.html">signup</a>
-            <a href="./forgotpass.html">forgot password?</a>
-            <a href="./index.html">homepage</a>
+            <div class="contain">
+                <a href="../pages/signup.html">signup</a>
+                <a href="../pages/forgotpass.html">forgot password?</a>
+                <a href="../index.html">homepage</a>
+                <p style="text-align: center;"> made by team 1 </p> 
+            </div>
         </form>
     </body>
-    <footer> 
-        <p style="text-align: center;"> made by team ? </p> 
-    </footer>
 </html>

@@ -9,50 +9,56 @@
   <link rel="stylesheet" href="../styles/carrierlist.css">
 
   <title>Hello, world!</title>
+  <style>
+    a:hover {
+      text-decoration: none;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    img {
+      width: auto;
+      height: 200px;
+      background-color: white;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container my-5">
 
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="card card-style">
-          <img src="../media/EgyptAirLogo.gif" class="card-img-top img-fluid card-image">
-          <div class="card-block m-2">
-            <h4 class="card-title" style="color: white;">Card title</h4>
-            <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card card-style">
-          <img src="../media/EgyptAirLogo.gif" class="card-img-top img-fluid card-image">
-          <div class="card-block m-2">
-            <h4 class="card-title" style="color: white;">Card title</h4>
-            <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card card-style">
-          <img src="../media/EgyptAirLogo.gif" class="card-img-top img-fluid card-image">
-          <div class="card-block m-2">
-            <h4 class="card-title" style="color: white;">Card title</h4>
-            <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
-          </div>
-        </div>
-      </div>
+    <div class="row" id="list-row">
 
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
     crossorigin="anonymous"></script>
 
+  <script>
+    $(document).ready(function () {
+      $.get('http://localhost:12345/scripts/carrier_review.php', {}, function (data) {
+        var obj = JSON.parse(data);
+        console.log(obj);
+        for(let carrier of obj){
+          var str = "";
+          str += '<div class="card card-style">';
+          str += '<img src="' + carrier[4] + '" class="card-img-top img-fluid card-image">';
+          str += '<div class="card-block m-2"> <h4 class="card-title" style="color: white;">';
+          str += carrier[1] + '</h4>';
+          str += '<p class="card-text p-y-1">';
+          str += carrier[3].substr(0,100) + '...' + '</p> </div>';
+
+          str = '<div class="col-md-4 mb-4"><a href="./reviewcarrier.html?index='+ carrier[0]+'">' + str + '</a></div>'
+
+          $('#list-row').append(str);
+        }
+      });
+
+    });
+  </script>
 </body>
 
 </html>

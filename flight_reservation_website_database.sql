@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2022 at 12:07 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.6
+-- Generation Time: Jun 20, 2022 at 10:16 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -22,6 +22,32 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `flight_reservation_website_database` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `flight_reservation_website_database`;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `carrier_info`
+--
+
+CREATE TABLE `carrier_info` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `rating` varchar(5) NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `logo_img` varchar(200) NOT NULL,
+  `big_img` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `carrier_info`
+--
+
+INSERT INTO `carrier_info` (`id`, `name`, `rating`, `description`, `logo_img`, `big_img`) VALUES
+(0, 'Air France', '4', 'Air France is Certified as a 4-Star Airline for the quality of its airport and onboard product and staff service. Product rating includes seats, amenities, food & beverages, IFE, cleanliness etc, and service rating is for both cabin staff and ground staff.', 'https://s28477.pcdn.co/wp-content/uploads/2017/04/AIR_FRANCE_1000-360x41.png', 'https://s28477.pcdn.co/wp-content/uploads/2017/07/Air_France_fleet_3-1024x576.jpg'),
+(1, 'Japan Airlines', '5', 'Japan Airlines is Certified as a 5-Star Airline for the quality of its airport and onboard product and staff service. Product rating includes seats, amenities, food & beverages, IFE, cleanliness etc, and service rating is for both cabin staff and ground staff.', 'https://s28477.pcdn.co/wp-content/uploads/2017/04/JAPAN_AIRLINES_1000-360x190.png', 'https://s28477.pcdn.co/wp-content/uploads/2017/09/JAL_1-1024x576.jpg'),
+(2, 'Lufthansa', '5', 'Lufthansa is Certified as a 5-Star Airline for the quality of its airport and onboard product and staff service. Product rating includes seats, amenities, food & beverages, IFE, cleanliness etc, and service rating is for both cabin staff and ground staff.', 'https://s28477.pcdn.co/wp-content/uploads/2018/06/lufthansa_logo_2018-360x63.png', 'https://s28477.pcdn.co/wp-content/uploads/2017/12/Lufthansa_5Star_3-1024x576.jpg'),
+(3, 'Air Canada', '4', 'Air Canada is Certified as a 4-Star Airline for the quality of its airport and onboard product and staff service. Product rating includes seats, amenities, food & beverages, IFE, cleanliness etc, and service rating is for both cabin staff and ground staff.', 'https://s28477.pcdn.co/wp-content/uploads/2017/04/AIR_CANADA_1000-360x113.png', 'https://s28477.pcdn.co/wp-content/uploads/2017/07/Air_Canada_B787_2-900x554.jpg'),
+(4, 'Azerbaijan Airlines', '4', 'Azerbaijan Airlines is Certified as a 4-Star Airline for the quality of its airport and onboard product and staff service. Product rating includes seats, amenities, food & beverages, IFE, cleanliness etc, and service rating is for both cabin staff and ground staff.', 'https://s28477.pcdn.co/wp-content/uploads/2017/04/Azal_240.png', 'https://s28477.pcdn.co/wp-content/uploads/2017/08/Azerbaijan_Airlines_2.jpg'),
+(5, 'Egyptair', '3', 'Egyptair is Certified as a 3-Star Airline Rating for the quality of its airport and onboard product and staff service. Product rating includes seats, amenities, food & beverages, IFE, cleanliness etc, and service rating is for both cabin staff and ground staff.', 'https://s28477.pcdn.co/wp-content/uploads/2017/04/EGYPTAIR_1000-360x72.png', 'https://s28477.pcdn.co/wp-content/uploads/2017/10/Egyptair_1-984x554.jpg');
 
 -- --------------------------------------------------------
 
@@ -210,6 +236,12 @@ CREATE TABLE `ticket_info` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `carrier_info`
+--
+ALTER TABLE `carrier_info`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `credit_card_details`

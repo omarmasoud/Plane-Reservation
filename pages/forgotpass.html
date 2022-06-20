@@ -1,28 +1,23 @@
 <html>
     <header>
-        <style>
-             img{
-                    display: block;
-                    height: 300px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    width: 50%;
-                }
-        </style>
+        <title>forgot password</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/login.css">
     </header>
-    <body style="background-color: aquamarine;">
-        <img id="mainlogo" src="media/initiallogo.png" alt="dashboard logo">
+    <body>
+        <img id="mainlogo" src="../media/logo.svg" alt="dashboard logo">
         <form action="?" style="text-align: center;">
-            <label for="email"></label>
+            <label for="email">Enter email</label>
             <input type="email" id="email">
             <br>
-            <input type="submit">
+            <button type="submit" class="sub">recover</button>
             <br>
-            <a href="./login.html">back to sign in</a>
-            <a href="./index.html">homepage</a>
+            <div class="contain">
+                <a href="../pages/login.html">back to sign in</a>
+                <a href="../index.html">homepage</a>
+                <p style="text-align: center;"> made by team 1 </p>
+            </div>
         </form>
     </body>
-    <footer> 
-        <p style="text-align: center;"> made by team ? </p> 
-    </footer>
+        
 </html>

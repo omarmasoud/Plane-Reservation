@@ -84,3 +84,16 @@ to_search.addEventListener("keydown", e => {
     
     list_arrow_traversal(e, list_items, "to");
 });
+
+departure_date.addEventListener("change", () => {
+    if (return_date.style.opacity > 0) {
+        return_date.focus();
+    }
+    else {
+        departure_date.blur();
+    }
+})
+
+return_date.addEventListener("change", () => {
+    return_date.blur();
+})

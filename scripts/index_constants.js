@@ -8,6 +8,8 @@ const from_countries = document.getElementById("from_countries");
 const to_countries = document.getElementById("to_countries");
 const departure_date = document.getElementById("departure_date");
 const return_date = document.getElementById("return_date");
+const login = document.getElementById("login");
+const signup = document.getElementById("signup");
 var current_li = {
     from: -1,
     to: -1

@@ -92,8 +92,19 @@ departure_date.addEventListener("change", () => {
     else {
         departure_date.blur();
     }
-})
+});
 
 return_date.addEventListener("change", () => {
     return_date.blur();
-})
+});
+
+signup.addEventListener("click", () => {
+    if (window.localStorage.getItem("logged_in") == 'true') {
+        login.textContent = "Login";
+        login.href = "./pages/login.html";
+
+        signup.textContent = "Sign Up";
+        signup.href = "./pages/signup.html";
+        window.localStorage.setItem("logged_in", "false");
+    }
+});

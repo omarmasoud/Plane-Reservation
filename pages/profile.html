@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="../styles/about.css">
+    <title>Profile Page</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .dp {
+            text-align: center;
+            display: inline;
+          
+            width: fit-content;
+             
+
+        }
+        .container{ text-align: center;}
+        img {
+            padding: 20px;
+            width: 200px;
+        }
+        .data{
+            display: inline;
+        }
+        .content{
+            display: inline;
+        
+        }
+        .content h3{
+            text-align: center;
+            color: white;
+
+        }
+        .content h4{
+            text-align: center;
+
+        }
+        button{
+            border-radius: 20px;
+            padding: 30px;
+            border:none;
+        }
+        button:hover{
+            background-color: #7357db;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <header class="header back-primary">
+            <img class="mainlogo" src="../media/logo.svg" alt="logo">
+
+            <nav class="navmenu headmenu">
+                <a href="../index.html">Home</a>
+                <a href="./payment.html">Payment Methods</a>
+                <a href="./about.html">Contact</a>
+                <a href="./about.html">About</a>
+                <!-- <a href="./pages/Booking.html">Book a Flight</a> -->
+                <a href="./support.html">Support</a>
+                <a href="#blog">Blog</a>
+            </nav>
+
+
+            <div class="navmenu headmenu">
+                <a href="./login.html">Login</a>
+                <a href="./forgotpass.html">Sign up</a>
+            </div>
+        </header>
+        <div class="container">
+            <div class="dp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Generic-person.svg"
+                    alt="put pic here"><br>
+            </div>
+            <div class="data">
+            <div class="content">
+                <h3>First Name:</h3>
+                <h4>Alex </h4>
+            </div>
+            <div class="content">
+                <h3>Second Name:</h3>
+                <h4>Mahone </h4>
+            </div>
+            <div class="content">
+                <h3>Address:</h3>
+                <h4>Nasr City, Cairo ,Egypt </h4>
+            </div>
+            <div class="content">
+                <h3>Phone Number:</h3>
+                <h4>01213128122 </h4>
+            </div>
+            <div class="content">
+                <h3>Email:</h3>
+                <h4>Amahone@test.com </h4>
+            </div>
+            <button>Edit?</button>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="navmenu footmenu">
+                <a href="./pages/about.html">Contact</a>
+                <a href="./pages/about.html">About</a>
+                <a href="./pages/support.html">Support</a>
+                <a href="#blog">Blog</a>
+            </div>
+        </footer>
+
+
+    </div>
+    <script>
+        window.onload = window.onresize = function () {
+            const header = document.getElementsByClassName("header")[0];
+            const body = document.getElementsByClassName("container")[0];
+            const footer = document.getElementsClassName("footer")[0];
+
+            let document_height = Math.max(document.body.scrollHeight,
+                document.body.offsetHeight,
+                document.documentElement.clientHeight,
+                document.documentElement.scrollHeight,
+                document.documentElement.offsetHeight);
+            body.style.height = `${document_height - header.clientHeight - 2 * footer.clientHeight}px`;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Review Flight</title>
+    <style>
+        .horizontalCalendar {
+            display: inline;
+            text-align: center;
+            border-radius: 15px;
+            padding: 60px;
+            margin: 20px;
+            border: 2px gray solid;
+            box-shadow: 2px 2px gray;
+        }
+
+        div {
+            text-align: center;
+            
+        }
+       .calendarhead{
+        
+        margin: 15px;
+       }
+
+        .leftborder {
+            display: inline;
+            padding: 5px;
+            border-left: 2px gray solid;
+
+        }
+
+        .leftborder>h3,
+        h4 {
+            display: inline;
+        }
+
+        .leftborder>h3 {
+            color: white;
+        }
+
+        .innertext {
+            display: inline;
+            margin: 20px;
+            color: white;
+        }
+
+        .innercalendar {
+            display: inline;
+            text-align: center;
+
+        }
+
+        .flatbtn {
+            background-color: inherit;
+            border: 0px white dashed;
+            height: 30px;
+            width: 20px;
+            border-radius: 7px;
+        }
+
+        .flatbtn:hover {
+            background-color: #7abcf5;
+        }
+
+        .innercalendar>div {
+            display: inline;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .innercalendar div:hover {
+
+            background-color: #7abcf5;
+
+        }
+        .footerbuttons{
+            vertical-align: middle;
+            text-align: center;
+            
+        }
+        .footerbuttons>button{
+            background-color: #7357db;
+            padding: 40px;
+            border: 1px #2375be solid;
+            border-radius: 10px;
+            margin-top: -70px;
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //assuming date is passed
+        function constructHorizontalCalendar(calendarNumber) {
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var today = new Date();
+
+            var calendar = document.getElementsByClassName('innercalendar')[calendarNumber];
+            calendar.innerHTML = "";
+            for (var i = -2; i < 0; i++) {
+                var day;
+                if (i < 0)
+                    day = 6 + i - 1;
+                else
+                    day = i
+                var elem = "<div>" + weekday[today.getDay() + day] + " " + today.getDate() + "/" + today.getMonth() + "/" + today.getFullYear() + "</div>";
+                calendar.innerHTML += elem;
+            }
+            for (var i = 0; i < 3; i++) {
+                var day;
+                if (i > 6)
+                    day = 6 - i + 1;
+                else
+                    day = i
+                var elem = "<div>" + weekday[today.getDay() + day] + " " + today.getDate() + "/" + today.getMonth() + "/" + today.getFullYear() + "</div>";
+                calendar.innerHTML += elem;
+            }
+        }
+    </script>
+
+    <div>
+        <header class="header back-primary">
+            <img class="mainlogo" src="../media/logo.svg" alt="logo">
+
+            <nav class="navmenu headmenu">
+                <a href="../index.html">Home</a>
+                <a href="./payment.html">Payment Methods</a>
+                <a href="./about.html">Contact</a>
+                <a href="./about.html">About</a>
+                <!-- <a href="./pages/Booking.html">Book a Flight</a> -->
+                <a href="./support.html">Support</a>
+                <a href="#blog">Blog</a>
+            </nav>
+
+
+            <div class="navmenu headmenu">
+                <a href="./login.html">Login</a>
+                <a href="./forgotpass.html">Sign up</a>
+            </div>
+        </header>
+        <div class="container">
+            <h1 class="secondary" style="text-align: left; padding-left: 20px;">Review your flight before final
+                reservation</h1>
+            <div>
+
+                <div class="calendarhead">
+                    <i class="fa-solid fa-plane-departure fa-2xl"></i>
+                    <h2 class="innertext">City 1 to City 2</h2>
+                </div>
+                <div>
+                    <!-- <h4>Date</h4> -->
+                    <div class="horizontalCalendar">
+                        <button class="flatbtn"> <i class="fa-solid fa-angle-left fa-2xl"></i></button>
+                        <div class="innercalendar">
+                            <script>constructHorizontalCalendar(0);</script>
+                        </div>
+                        <button class="flatbtn"> <i class="fa-solid fa-angle-right fa-2xl"></i></button>
+                        <div class="leftborder">
+                            <h3>Flight #</h3>
+                            <h4>31323</h4>
+                        </div>
+                        <div class="leftborder">
+                            <h3> Carrier</h3>
+                            <h4>Egyptair</h4>
+                        </div>
+                        <div class="leftborder">
+                            <h3> Price</h3>
+                            <h4>$234</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+                <div class="calendarhead">
+                    <i class="fa-solid fa-plane-arrival fa-2xl"></i>
+                    <h2 class="innertext">City 1 to City 2</h2>
+                </div>
+                <div>
+                    <!-- <h4>Date</h4> -->
+                    <div class="horizontalCalendar">
+                        <button class="flatbtn"><i class="fa-solid fa-angle-left fa-2xl"></i></button>
+                        <div class="innercalendar">
+                            <script>constructHorizontalCalendar(1);</script>
+                        </div>
+
+
+                        <button class="flatbtn"><i class="fa-solid fa-angle-right fa-2xl"></i></button>
+                        <div class="leftborder">
+                            <h3>Flight #</h3>
+                            <h4>42112</h4>
+                        </div>
+                        <div class="leftborder">
+                            <h3> Carrier</h3>
+                            <h4>Air France</h4>
+                        </div>
+                        <div class="leftborder">
+                            <h3> Price</h3>
+                            <h4>$322</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footerbuttons">
+            <button>
+                Adjust
+            </button>
+            <button>
+                Proceed
+            </button>
+        </div>
+      
+        <footer class="footer">
+            <div class="navmenu footmenu">
+                <a href="./pages/about.html">Contact</a>
+                <a href="./pages/about.html">About</a>
+                <a href="./pages/support.html">Support</a>
+                <a href="#blog">Blog</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        window.onload = window.onresize = function () {
+            const header = document.getElementsByTagName("header")[0];
+            const body = document.getElementsByClassName("container")[0];
+            const footer = document.getElementsByTagName("footer")[0];
+
+            let document_height = Math.max(document.body.scrollHeight,
+                document.body.offsetHeight,
+                document.documentElement.clientHeight,
+                document.documentElement.scrollHeight,
+                document.documentElement.offsetHeight);
+            body.style.height = `${document_height - header.clientHeight - 2 * footer.clientHeight}px`;
+        }
+    </script>
+
+</body>
+
+</html>

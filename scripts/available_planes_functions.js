@@ -192,9 +192,10 @@ function __add_economy_price(route, row) {
     let economic_div = document.createElement("div");
     economic_div.classList.add("back-primary-light", "d-flex", "h-100", "w-100", "align-items-center", "justify-content-center", "prices_box");
 
-    let price = document.createElement("p");
+    let price = document.createElement("a");
     price.classList.add("price", "secondary");
     price.textContent = `${route["economic"]}EGP`;
+    price.href = "./reservation.html";
 
     economic_div.appendChild(price);
     economic.appendChild(economic_div);
@@ -208,11 +209,21 @@ function __add_business_price(route, row) {
     let business_div = document.createElement("div");
     business_div.classList.add("business_box", "d-flex", "h-100", "w-100", "align-items-center", "justify-content-center", "prices_box");
 
-    let price = document.createElement("p");
+    let price = document.createElement("a");
     price.classList.add("price", "secondary");
     price.textContent = `${route["business"]}EGP`;
+    price.href = "./reservation.html";
 
     business_div.appendChild(price);
     business.appendChild(business_div);
     row.appendChild(business);
+}
+
+function populate_settings() {
+    ap_from_search.value = current_flight_state.from;
+    ap_to_search.value = current_flight_state.to;
+}
+
+function refresh_settings() {
+
 }

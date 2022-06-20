@@ -112,3 +112,12 @@ function show_hide_return_date(choice) {
             break;
     }
 }
+
+function save_current_flight_state() {
+    current_flight_state.from = from_search.value;
+    current_flight_state.to = to_search.value;
+    current_flight_state.departure = departure_date.value;
+    if (return_date.style.opacity > 0) {
+        current_flight_state.return = return_date.value;
+    }
+}

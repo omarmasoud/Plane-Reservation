@@ -103,3 +103,5 @@ const flight_routes = [
         business: "38,921",
     },
 ]
+
+var current_flight_state = {}

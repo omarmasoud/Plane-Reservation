@@ -321,9 +321,7 @@
             <button>
                 Adjust
             </button>
-            <button>
-                Proceed
-            </button>
+            <button><a id="proceed">Proceed</a></button>
         </div>
 
         <footer class="footer">
@@ -348,6 +346,10 @@
                 document.documentElement.offsetHeight);
             body.style.height = `${document_height - header.clientHeight - 2 * footer.clientHeight}px`;
         }
+
+        let isLoggedIn = window.localStorage.getItem('logged_in');
+
+        document.getElementById("proceed").href = isLoggedIn ? "./payment.html" : "./login.html";
     </script>
 
 </body>

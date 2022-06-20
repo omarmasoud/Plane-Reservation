@@ -13,7 +13,7 @@
             <label for="pass">Password</label>
             <input type="password" id="pass">
             <br>
-            <button type="submit" class="sub">Login</button>
+            <button type="submit" class="sub"><a id="login">Login</a></button>
             <br>
             <div class="contain">
                 <a href="../pages/signup.html">signup</a>
@@ -22,5 +22,14 @@
                 <p style="text-align: center;"> made by team 1 </p> 
             </div>
         </form>
+
+        <script>
+            let login = document.getElementById("login")
+            login.href = "./payment.html";
+
+            login.addEventListener('click', () => {
+                window.localStorage.setItem("logged_in", true);
+            });
+        </script>
     </body>
 </html>

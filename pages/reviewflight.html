@@ -347,7 +347,7 @@
             body.style.height = `${document_height - header.clientHeight - 2 * footer.clientHeight}px`;
         }
 
-        let isLoggedIn = window.localStorage.getItem('logged_in');
+        let isLoggedIn = window.localStorage.getItem('logged_in') == 'true';
 
         document.getElementById("proceed").href = isLoggedIn ? "./payment.html" : "./login.html";
     </script>

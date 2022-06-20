@@ -6,6 +6,7 @@ const ap_from_countries = document.getElementById("from_countries");
 const ap_to_countries = document.getElementById("to_countries");
 const ap_departure_date = document.getElementById("departure_date");
 const ap_return_date = document.getElementById("return_date");
+const available_flights = document.getElementById("available_planes");
 var ap_current_li = {
     from: -1,
     to: -1

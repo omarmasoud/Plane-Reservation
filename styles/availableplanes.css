@@ -8,13 +8,6 @@
       to { opacity: 1; }
 }
 
-.table_legend {
-    margin: auto;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 18px;
-}
-
 #current_settings {
     margin-top: 64px;
     margin-left: auto;
@@ -125,4 +118,69 @@
 
 #available_planes {
     border-radius: 16px;
+    padding: 16px;
+}
+
+.table_legend {
+    margin: auto;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.route_row {
+    /* height: 120px; */
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.logo_link {
+    margin: 8px auto 8px auto;
+}
+
+.airline_logo {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-shadow: 2px 2px 12px 2px #2375be;
+    width: 128px;
+    height: 128px;
+    border: solid 1px #3799f0;
+}
+
+.airline_name {
+    margin: auto;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.flight_name_type {
+    margin: auto;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.departure_arrival_time {
+    margin: auto;
+}
+
+.price {
+    margin: auto;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.prices_boxes {
+    margin: 8px
+}
+
+.business_box {
+    background-color: #E8CB4A;
+}
+
+.no_flights_found {
+    margin: 32px auto 32px auto;
+    font-style: italic;
+    font-size: 32px;
 }

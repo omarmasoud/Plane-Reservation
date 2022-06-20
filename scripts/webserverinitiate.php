@@ -2,7 +2,7 @@
 if (!file_exists('DBLOCK')) {
 
     $mysqli = new mysqli("localhost", "root", ""); // Establish initial connection...
-    $mysqli->query("DROP IF EXISTS DATABASE flight_reservation_website_database"); // DROP database; if exists,
+    $mysqli->query("DROP DATABASE IF EXISTS flight_reservation_website_database"); // DROP database; if exists,
     $mysqli->query("CREATE DATABASE flight_reservation_website_database"); // then re-create it in order to...
     $mysqli->multi_query(file_get_contents('flight_reservation_website_database.sql')); // ...replace it,
     while($mysqli->next_result()); // and consume the results buffer (everything should be OK, the .sql works fine).

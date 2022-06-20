@@ -59,7 +59,7 @@
         <script>
             $('#proceed').on('click', function () {
                 $.get('http://localhost:12345/scripts/paymenttest.php', {payment_method: 'visa'}, function(data) {
-                    alert(data)
+                    console.log(data)
                 })
             })
         </script>
